@@ -1,0 +1,81 @@
+# encoding: cp866
+
+print "How old are you? "
+a = gets.to_i
+
+print "Wanna play? (Y/N) "
+b = gets.strip.capitalize
+
+if a >= 18 && b == "Y"
+	puts "Good, lets go!"
+	
+	money = 100
+	
+	1000.times do
+
+		puts "Enter to play"
+		gets
+	
+		x = rand(0..8)
+		y = rand(0..8)
+		z = rand(0..8)
+	
+		if x == 0 && y == 0 && z == 0
+		puts "Your balance has been reset"
+		money = 0
+		end
+	
+		if x == 1 && y == 1 && z == 1
+		puts "You won 10$"
+		money = money + 10
+		end
+
+		if x == 2 && y == 2 && z == 2
+		puts "You won 20$"
+		money = money + 20
+		end
+
+		if x == 3 && y == 3 && z == 3
+		puts "You won 30$"
+		money = money + 30
+		end
+
+		if x == 4 && y == 4 && z == 4
+		puts "You won 40$"
+		money = money + 40
+		end
+
+		if x == 5 && y == 5 && z == 5
+		puts "You won 50$"
+		money = money + 50
+		end
+
+		if x == 6 && y == 6 && z == 6
+		puts "You won 60$"
+		money = money / 2
+		end
+
+		if x == 7 && y == 7 && z == 7
+		puts "You won 70$"
+		money = money + 70
+		end
+
+		if x == 8 && y == 8 && z == 8
+		puts "You won 80$"
+		money = money + 80
+		end
+
+		if x == 1 && y == 2 && z == 3
+		puts "You won 123$"
+		money = money + 123
+		end
+		
+		puts "#{x} #{y} #{z}"
+		puts "Money left #{money}"
+
+		if money <= 0
+			puts "You lose"
+			exit
+		end	
+	end
+end
