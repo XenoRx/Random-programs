@@ -1,5 +1,3 @@
-# encoding: cp866
-
 print "How old are you? "
 a = gets.to_i
 
